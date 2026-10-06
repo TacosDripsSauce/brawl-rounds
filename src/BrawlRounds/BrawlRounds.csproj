@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <OutputType>Library</OutputType>
+    <AssemblyName>BrawlRounds</AssemblyName>
+    <RootNamespace>BrawlRounds</RootNamespace>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+    <DebugType>portable</DebugType>
+    <RoundsFolder Condition="'$(RoundsFolder)' == '' and '$(ROUNDS_DIR)' != ''">$(ROUNDS_DIR)</RoundsFolder>
+    <RoundsFolder Condition="'$(RoundsFolder)' == ''">C:\Program Files (x86)\Steam\steamapps\common\ROUNDS</RoundsFolder>
+    <BepInExFolder Condition="'$(BepInExFolder)' == ''">$(RoundsFolder)\BepInEx</BepInExFolder>
+    <UnboundLibPath Condition="'$(UnboundLibPath)' == ''">$(BepInExFolder)\plugins\UnboundLib.dll</UnboundLibPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp"><HintPath>$(RoundsFolder)\Rounds_Data\Managed\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Photon3Unity3D"><HintPath>$(RoundsFolder)\Rounds_Data\Managed\Photon3Unity3D.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="PhotonRealtime"><HintPath>$(RoundsFolder)\Rounds_Data\Managed\PhotonRealtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="PhotonUnityNetworking"><HintPath>$(RoundsFolder)\Rounds_Data\Managed\PhotonUnityNetworking.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.Physics2DModule"><HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(RoundsFolder)\Rounds_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BepInEx"><HintPath>$(BepInExFolder)\core\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(BepInExFolder)\core\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnboundLib"><HintPath>$(UnboundLibPath)</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

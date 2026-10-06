@@ -1,0 +1,9 @@
+{
+  "schema": "hooks.v1",
+  "rows": [
+    {"id":"hook_round_start","target":"UnboundLib.GameModes.GameModeHooks","method":"HookRoundStart","hookType":"event","system":"spawn_unarmed","verified":true},
+    {"id":"hook_damage","target":"HealthHandler","method":"DoDamage","hookType":"HarmonyPrefix","system":"percent_damage","verified":true},
+    {"id":"hook_attack","target":"Gun","method":"DoAttack","hookType":"HarmonyPrefix","system":"pickup_spawner","verified":true},
+    {"id":"hook_player_update","target":"Player","method":"Update","hookType":"HarmonyPostfix","system":"movement","verified":true}
+  ]
+}

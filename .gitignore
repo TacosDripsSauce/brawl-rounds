@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+*.dll
+*.pdb
+*.zip
+_build/
+_test-install/
+local/
+fal_manifest.jsonl
+
+__pycache__/
+*.pyc

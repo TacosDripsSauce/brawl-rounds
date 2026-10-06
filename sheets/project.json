@@ -1,0 +1,14 @@
+{
+  "id":"brawl-rounds",
+  "workingTitle":"Brawl ROUNDS",
+  "version":"0.1.0-dev",
+  "hostGame":"ROUNDS",
+  "inspirationGame":"Brawlhalla",
+  "requiredGames":["ROUNDS"],
+  "players":{"min":2,"max":2,"mode":"native ROUNDS 1v1 lobby"},
+  "tagline":"ROUNDS becomes a 1v1 platform fighter with weapon pickups, rising knockback and ring-outs.",
+  "license":null,
+  "remixPermission":null,
+  "buildStatus":"source-only-uncompiled",
+  "meltyStatus":"draft-unvalidated"
+}

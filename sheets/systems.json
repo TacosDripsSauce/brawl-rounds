@@ -1,0 +1,13 @@
+{
+  "schema": "systems.v1",
+  "rows": [
+    {"id":"spawn_unarmed","trigger":"round_start","implementation":"Clear equipped brawler weapon and spawn pickups after player spawn.","dependsOn":["pickup_spawner"],"verified":true},
+    {"id":"pickup_spawner","trigger":"round_start","implementation":"Spawn four deterministic pickup pads around the active map using runtime primitives.","dependsOn":[],"verified":true},
+    {"id":"percent_damage","trigger":"health_damage","implementation":"Convert incoming ROUNDS damage magnitude to brawler percent and suppress lethal health damage.","dependsOn":["knockback"],"verified":true},
+    {"id":"knockback","trigger":"health_damage","implementation":"Apply velocity impulse scaled by current percent, weapon and card modifiers.","dependsOn":[],"verified":true},
+    {"id":"ringout","trigger":"fixed_update","implementation":"Eliminate players that cross camera-relative blast-zone bounds.","dependsOn":["percent_damage"],"verified":true},
+    {"id":"movement","trigger":"player_attach","implementation":"Increase air-control feel and expose card multipliers while leaving native ROUNDS bindings intact.","dependsOn":[],"verified":true},
+    {"id":"card_draft","trigger":"plugin_start","implementation":"Register platform-fighter stat cards with UnboundLib CustomCard so native ROUNDS draft flow remains.","dependsOn":[],"verified":true},
+    {"id":"multiplayer_1v1","trigger":"native_lobby","implementation":"Use ROUNDS native 1v1 lobby/session; mod state is deterministic and each peer must run the mod.","dependsOn":["percent_damage","pickup_spawner"],"verified":true}
+  ]
+}

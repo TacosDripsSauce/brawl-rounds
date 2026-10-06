@@ -1,0 +1,9 @@
+{
+  "schema": "weapons.v1",
+  "rows": [
+    {"id":"sword","displayName":"Sword","kind":"melee","damagePercent":11.0,"baseKnockback":7.5,"range":2.1,"cooldown":0.42,"projectiles":1,"spread":0.0,"moveSpeedMultiplier":1.05,"pickupWeight":1.0,"verified":true},
+    {"id":"spear","displayName":"Spear","kind":"melee","damagePercent":9.0,"baseKnockback":8.2,"range":3.2,"cooldown":0.58,"projectiles":1,"spread":0.0,"moveSpeedMultiplier":0.98,"pickupWeight":1.0,"verified":true},
+    {"id":"pistol","displayName":"Pistol","kind":"ranged","damagePercent":7.5,"baseKnockback":5.4,"range":14.0,"cooldown":0.30,"projectiles":1,"spread":0.02,"moveSpeedMultiplier":1.0,"pickupWeight":1.0,"verified":true},
+    {"id":"shotgun","displayName":"Shotgun","kind":"ranged","damagePercent":4.0,"baseKnockback":3.1,"range":8.0,"cooldown":0.72,"projectiles":5,"spread":0.16,"moveSpeedMultiplier":0.92,"pickupWeight":1.0,"verified":true}
+  ]
+}
